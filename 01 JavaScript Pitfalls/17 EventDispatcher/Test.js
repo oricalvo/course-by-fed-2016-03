@@ -1,13 +1,13 @@
 (function () {
 
-    EventDispatcher.subscribe("login", function () {
-        console.log("User logged in");
+    EventDispatcher.subscribe("login", function (args) {
+        console.log("User logged in: " + args.userName);
     });
 
-    EventDispatcher.subscribe("logout", function () {
-        console.log("User logged out");
+    EventDispatcher.subscribe("logout", function (args) {
+        console.log("User logged out: " + args.when);
     });
 
-    EventDispatcer.emit("login");
-    EventDispatcer.emit("logout");
+    EventDispatcer.emit("login", { userName: "ori" });
+    EventDispatcer.emit("logout", { when: new Date() });
 })();
