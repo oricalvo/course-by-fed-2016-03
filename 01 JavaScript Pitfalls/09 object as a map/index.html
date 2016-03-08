@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var map = {};
+
+        map["ori"] = function () { }
+        map["roni"] = 123;
+        map["udi"] = undefined;
+
+        for (var key in map) {
+            console.log(key + ": " + map[key]);
+        }
+
+        if (map["udi"] !== undefined) {
+            console.log("Exist");
+        }
+        else {
+            console.log("Not exist");
+        }
+
+        if ("udi" in map) {
+            console.log("Exist");
+        }
+        else {
+            console.log("Not exist");
+        }
+
+        if (map.hasOwnProperty("udi")) {
+            console.log("Exist");
+        }
+        else {
+            console.log("Not exist");
+        }
+
+        delete map["udi"];
+
+        console.log("AFTER deleting");
+        if (map.hasOwnProperty("udi")) {
+            console.log("Exist");
+        }
+        else {
+            console.log("Not exist");
+        }
+
+        var obj = {};
+        obj = { id: 1, name: "Ori" };
+        console.log(obj.toString());
+        map[obj] = 123;
+
+        if (map[{ id: 1, name: "Ori" }]) {
+            console.log("EXIST");
+        }
+    </script>
+</body>
+</html>

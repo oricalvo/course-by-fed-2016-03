@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        (function () {
+            "use strict";
+
+            function f(n1, n2) {
+                //console.log(n1 + n2);
+
+                x = 12;
+
+                //f.caller.arguments
+
+                console.log(this);
+
+                //this.x = 123;
+            }
+
+            f(2, 3);
+        })();
+
+        //window.f(2, 3);
+        //f.call("dfiuhdidhdui", 2, 3);
+    </script>
+</body>
+</html>

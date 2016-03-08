@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var x = 12;
+
+        console.log(window.x);
+
+        window.x = 14;
+
+        console.log(x);
+
+        for (var key in window) {
+            console.log(key);
+        }
+
+        if (config.InjectSomethingGlobal) {
+            window.Blabla = 12;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var x = {
+            id: 123,
+        };
+
+        function g(y) {
+            //y = {
+            //    id: 444,
+            //};
+
+            y.id = 444;
+        }
+
+        g(x);
+
+        console.log(x.id);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function f() {
+
+            var num = 12;
+
+            function g() {
+                num++;
+            }
+
+            return g;
+        }
+
+        var g2 = f();
+        g2();
+        g2();
+
+        //window.f(2, 3);
+        //f.call("dfiuhdidhdui", 2, 3);
+    </script>
+</body>
+</html>
