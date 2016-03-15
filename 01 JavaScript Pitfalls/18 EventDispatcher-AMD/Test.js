@@ -1,4 +1,4 @@
-(function () {
+define(["./EventDispatcher"], function (EventDispatcher) {
 
     EventDispatcher.subscribe("login", function (args) {
         console.log("User logged in: " + args.userName);
@@ -8,6 +8,7 @@
         console.log("User logged out: " + args.when);
     });
 
-    EventDispatcer.emit("login", { userName: "ori" });
-    EventDispatcer.emit("logout", { when: new Date() });
-})();
+    EventDispatcher.emit("login", { userName: "ori" });
+    EventDispatcher.emit("logout", { when: new Date() });
+
+});
