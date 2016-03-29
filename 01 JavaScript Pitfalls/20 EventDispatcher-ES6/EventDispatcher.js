@@ -16,8 +16,8 @@ function subscribe(name, handler) {
     }
     handlers.push(handler);
 }
-exports.EventDispatcher = {
+export var EventDispatcher = {
     emit: emit,
-    subscribe: subscribe
+    subscribe: subscribe,
 };
 //# sourceMappingURL=EventDispatcher.js.map

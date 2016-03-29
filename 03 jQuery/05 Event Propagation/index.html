@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1" style="background-color: red;">
+        <button id="button1">Click me</button>
+        <button id="button1">Click me</button>
+        <button id="button1">Click me</button>
+        <button id="button1">Click me</button>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+//        document.getElementById("div1").addEventListener("click", function(e) {
+//            console.log("Clicked %O", e);
+//        });
+
+        $("#div1").on("click", "not:button", function(e) {
+            console.log("Clicked");
+        });
+    </script>
+</body>
+</html>

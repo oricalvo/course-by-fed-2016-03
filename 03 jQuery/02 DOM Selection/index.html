@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="name" />
+
+    <button id="button1" class="btn">Click me 1</button>
+
+
+    <div>
+        <span>deuhdfiuhd</span>
+        <p>duygdudygd</p>
+        <button id="btn3">Click me</button>
+    </div>
+
+    <div>
+        Div 2
+    </div>
+    <!--<button id="button2">Click me 2</button>-->
+
+    <script src="jquery.js"></script>
+
+    <script>
+        (function($) {
+            $(".btn").css("color", "blue");
+
+            var res = $("button");
+            res.each(function () {
+                console.log("ID = " + $(this).attr("id"));
+            });
+
+            var res = $("div");
+            console.log(res.text());
+            console.log(res.html());
+
+            res.css("background-color", "red");
+
+            //res.html("123");
+        })(jQuery);
+
+//        for(var i=0; i<res.length; i++) {
+//            console.log(res[i].innerHTML);
+//        }
+    </script>
+</body>
+</html>
