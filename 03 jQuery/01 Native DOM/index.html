@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="name" />
+    <button id="button1">Click me</button>
+
+    <script>
+        var input = document.getElementById("name");
+
+        var button1 = document.getElementById("button1");
+        button1.addEventListener("click", function() {
+            console.log("CLICKED: " + input.value);
+        });
+
+    </script>
+</body>
+</html>
