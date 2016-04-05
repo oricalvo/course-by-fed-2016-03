@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div ng-controller="CalcCtrl as ctrl">
+        <div>
+            <input ng-model="ctrl.expr" />
+        </div>
+
+        <button ng-repeat="btn in ctrl.buttons" ng-click="ctrl.buttonClicked(btn)">
+            <span>{{btn.text}}</span>
+        </button>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="CalcCtrl.js"></script>
+</body>
+</html>

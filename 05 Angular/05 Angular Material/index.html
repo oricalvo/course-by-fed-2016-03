@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="styles/angular-material.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-controller="CalcCtrl as ctrl">
+        <div>
+            <input ng-model="ctrl.expr" />
+        </div>
+
+        <button ng-repeat="btn in ctrl.buttons" ng-click="ctrl.buttonClicked(btn)">
+            <span>{{btn.text}}</span>
+        </button>
+
+        <md-select ng-model="ctrl.selectedContactId">
+            <md-option ng-repeat="contact in ctrl.contacts"
+                       value="{{contact.id}}">
+                {{contact.name}}
+            </md-option>
+        </md-select>
+    </div>
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-aria.js"></script>
+    <script src="lib/angular-animate.js"></script>
+    <script src="lib/angular-messages.js"></script>
+    <script src="lib/angular-material.js"></script>
+    <script src="app.js"></script>
+    <script src="CalcCtrl.js"></script>
+</body>
+</html>
