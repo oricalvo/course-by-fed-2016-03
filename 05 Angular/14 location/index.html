@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <base href="/14%20location/" />
+</head>
+<body>
+    <div ng-controller="ContactListCtrl">
+        <ul>
+            <li ng-repeat="contact in contacts">
+                <span>{{contact.name}}</span>
+            </li>
+        </ul>
+
+        <button ng-click="change()">Change</button>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="ContactService.js"></script>
+    <script src="ContactListCtrl.js"></script>
+</body>
+</html>

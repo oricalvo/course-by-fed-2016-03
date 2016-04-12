@@ -1,0 +1,15 @@
+<h1>{{ctrl.message}}</h1>
+
+<div ng-repeat="i in [1,2]">
+    <clock
+            name="clock"
+            format="ctrl.format"
+            on-tick="ctrl.blablaTick(time)" >
+    </clock>
+    <button ng-click="clock.start()">Start</button>
+    <button ng-click="clock.stop()">Stop</button>
+</div>
+
+
+<button ng-click="ctrl.change()">Change Format</button>
+
